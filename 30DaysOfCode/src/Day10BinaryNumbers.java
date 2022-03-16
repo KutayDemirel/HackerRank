@@ -9,21 +9,24 @@ public class Day10BinaryNumbers {
 
         bufferedReader.close();
 
-        int digit =1;
-        int binary =0;
+        long digit =1;
+        long binary =0;
         int sum = 0;
 
         while(n >= 2){
 
             binary += digit * (n % 2);
+            //System.out.println(binary);
             n = (int) Math.floor(n/2);
+            //System.out.println(n);
             digit *= 10;
+            //System.out.println(digit);
         }
 
         binary += n*digit;
 
-        // System.out.println(binary);
-        String seek = Integer.toString(binary);
+        //System.out.println(binary);
+        String seek = Long.toString(binary);
         String[] arr = seek.split("0");
         for(int i = 0 ; i < arr.length ; i++){
             if(sum < arr[i].length())
