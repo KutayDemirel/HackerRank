@@ -20,7 +20,9 @@ public class Day9Recursion3 {
         // Write your code here
         if(n == 1){
             return 1;
+
         }
+        int a = 0;
         return n * factorial(n-1);
 
     }
