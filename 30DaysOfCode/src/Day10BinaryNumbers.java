@@ -16,17 +16,20 @@ public class Day10BinaryNumbers {
         while(n >= 2){
 
             binary += digit * (n % 2);
+
             //System.out.println(binary);
             n = (int) Math.floor(n/2);
             //System.out.println(n);
             digit *= 10;
             //System.out.println(digit);
+
         }
 
         binary += n*digit;
 
         //System.out.println(binary);
         String seek = Long.toString(binary);
+
         String[] arr = seek.split("0");
         for(int i = 0 ; i < arr.length ; i++){
             if(sum < arr[i].length())
